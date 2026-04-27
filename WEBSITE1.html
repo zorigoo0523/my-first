@@ -1,26 +1,83 @@
-<link rel="stylesheet" href="style.css">
-<main class="container">
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sneakers">
-        <h2>Kyrie Infinity</h2>
-        <p>Хурд болон хөдөлгөөний төгс зохицол.</p>
-        <h3 class="price">450,000₮</h3>
-        <button class="buy-btn">Сагсанд хийх</button>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Tech Store</title>
+    <style>
+        /* CSS ХЭСЭГ: Энд бид зургийн хэмжээ болон дизайныг удирдана */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background-color: #1e293b;
+            width: 300px; /* Картны өргөн тогтмол */
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ЗУРГИЙГ ЗАСАХ ХЭСЭГ: Энэ код зургийг хайрцагт нь багтаана */
+        .product-card img {
+            width: 100%;        /* Хайрцагныхаа өргөнийг 100% дүүргэнэ */
+            height: 200px;       /* Өндрийг нь тогтмол болгоно */
+            object-fit: cover;   /* Зургийг сунгаж муухай болгохгүйгээр тааруулна */
+            border-radius: 10px;
+        }
+
+        .price {
+            color: #38bdf8;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: #38bdf8;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Миний Анхны Вэбсайт</h1>
+
+    <div class="container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sneakers">
+            <h2>Kyrie Infinity</h2>
+            <p class="price">450,000₮</p>
+            <button onclick="alert('Сагсанд нэмэгдлээ!')">Худалдан авах</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+            <h2>HyperX Cloud</h2>
+            <p class="price">320,000₮</p>
+            <button onclick="alert('Сагсанд нэмэгдлээ!')">Худалдан авах</button>
+        </div>
     </div>
 
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headset">
-        <h2>HyperX Cloud III</h2>
-        <p>Мэргэжлийн түвшний цэвэр дуугаралт.</p>
-        <h3 class="price">380,000₮</h3>
-        <button class="buy-btn">Сагсанд хийх</button>
-    </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae" alt="Keyboard">
-        <h2>SteelSeries Apex</h2>
-        <p>Хамгийн хурдан хариу үйлдэл.</p>
-        <h3 class="price">620,000₮</h3>
-        <button class="buy-btn">Сагсанд хийх</button>
-    </div>
-</main>
+</body>
+</html>
